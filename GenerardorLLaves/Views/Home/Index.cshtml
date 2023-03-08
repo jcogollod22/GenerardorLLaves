@@ -1,0 +1,45 @@
+﻿@model GenerardorLLaves.VieModel.Llaves
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <h1>Generador de numeros de 128 bit</h1>
+    <p>
+        Esta aplicación genera dos números hexadecimal de forma aleatoria
+        , calcula la suma XOR de los caracteres obteniendo un resultado que emerge de
+        concatenar los arreglos de bytes del numero 1 y el numero 2
+    </p>
+    <div class="row">
+        <div>
+            <form>
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label asp-for="numberOnehexadecimal"></label>
+                    <input asp-for="numberOnehexadecimal" type="text" class="form-control" id="numberOnehexadecimal" aria-describedby="emailHelp" placeholder="Resultado número hexadecimal 1" value="." readonly>
+                    <span asp-validation-for="numberOnehexadecimal"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="numberTwohexadecimal"></label>
+                    <input asp-for="numberTwohexadecimal" type="text" class="form-control" id="numberTwohexadecimal" aria-describedby="emailHelp" placeholder="Resultado número hexadecimal 2" value="." readonly>
+                    <span asp-validation-for="numberTwohexadecimal"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="numberBinario"></label>
+                    <input asp-for="numberBinario" type="text" class="form-control" id="numberBinario" aria-describedby="emailHelp" placeholder="Resultado número hexadecimal 2" value="." readonly>
+                    <span asp-validation-for="numberBinario"></span>
+                </div>
+                <br />
+                <hr />
+                <a class="btn btn-primary" onclick="GenerarLlaves()">Generate 128bit</a>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts
+    {
+           
+    <script src="~/js/LLaves.js"></script>
+
+}
