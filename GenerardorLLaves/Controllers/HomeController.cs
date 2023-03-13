@@ -67,7 +67,7 @@ namespace GenerardorLLaves.Controllers
         // Función para generar una llave aleatoria
         string GenerateRandomKey(Random random)
         {
-            int keyLength = 32; // longitud de la llave
+            int keyLength = 31; // longitud de la llave
             string randomHex = "";
             for (int i = 0; i < keyLength; i++)
             {
